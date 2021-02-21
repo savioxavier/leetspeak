@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>LeetSpeak Converter</title>
+      <link rel="stylesheet" href="leetspeak.css" />
+  </head>
+  <body>
+    <div>
+      <h1 id="heading"></h1>
+      <p id="intro"></p>
+      <br />
+      <div class="user-inputs">
+        <div>
+          <select id="leet-type">
+            <option value="num">Number Replace</option>
+            <option value="sp">Special Characters</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <textarea id="regular-text" type="text" placeholder="Type something here"></textarea>
+        </div>
+      </div>
+      <br />
+      <div class="leet-result">
+        <pre id="result"></pre>
+      </div>
+      <div class="theme-selector">
+          <span id="theme-text">Theme</span>
+          <div class="theme-selector-button-holder">
+            <span id="click-to-change">Hackerman</span>
+          </div>
+      </div>
+      <footer>
+        <span id="footer-text"></span>
+      </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/typeit@7.0.4/dist/typeit.min.js"></script>
+    <script src="devtools-detect/index.js"></script>
+    <script src="leetspeak.js"></script>
+</html>
