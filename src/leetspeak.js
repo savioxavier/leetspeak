@@ -78,7 +78,11 @@ const introText =
 const secondText =
   "For example, leet spellings of the word leet include 1337 and l33t. It is used on the internet in forums, chat rooms and online games.";
 
-// Defines a new TypeIt instance; 'Types' a specified string and customizes it manually by using other methods (pause(), break() etc.) as opposed to default values; afterComplete deletes cursor after completion
+// Defines a new TypeIt instance;
+// 'Types' a specified string and customizes it manually
+// by using other methods (pause(), break() etc.)
+// as opposed to default values
+// afterComplete deletes cursor after completion
 
 new TypeIt("#heading", {
   speed: textSpeed,
@@ -126,7 +130,9 @@ new TypeIt("#footer-text", {
 
 let root = document.documentElement;
 
-// Function changes the CSS variables textcol and bgcol (text color and background color, respectively.) All theme colors are from Opera GX
+// Function changes the CSS variables textcol and bgcol
+//  (text color and background color, respectively.)
+// All theme colors are from Opera GX
 
 function tp(textColor, bgColor) {
   root.style.setProperty("--textcol", textColor);
@@ -166,7 +172,10 @@ tname.textContent = `< ${theme} >`;
 
 tname.addEventListener("click", changeTheme);
 
-// Since select() [the standard for copying text] can only be used for visible input elements such as textarea, we extract the text content of <pre> element and assign it to a new <textarea> element. Then we proceed to copy the content of the "invisible" textarea.
+// Since select() [the standard for copying text]
+// can only be used for visible input elements such as textarea,
+// we extract the text content of <pre> element and assign it to a new <textarea> element.
+// Then we proceed to copy the content of the "invisible" textarea.
 
 function copyText() {
   const preText = document.querySelector("#result").textContent;
