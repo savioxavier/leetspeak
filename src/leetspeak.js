@@ -11,7 +11,7 @@ function convertToLeet() {
 
   let chars = {};
 
-  if (type == "sp") {
+  if (type === "sp") {
     chars = {
       a: "@",
       b: "ß",
@@ -49,7 +49,7 @@ function convertToLeet() {
     );
 
     result.textContent = convertResult;
-  } else if (type == "num") {
+  } else if (type === "num") {
     chars = {
       a: "4",
       e: "3",
@@ -87,7 +87,7 @@ const secondText =
 new TypeIt("#heading", {
   speed: textSpeed,
   waitUntilVisible: true,
-  afterComplete: function (step, instance) {
+  afterComplete(step, instance) {
     instance.destroy();
   },
 })
@@ -99,7 +99,7 @@ new TypeIt("#intro", {
   speed: textSpeed,
   waitUntilVisible: true,
   lifeLike: true,
-  afterComplete: function (step, instance) {
+  afterComplete(step, instance) {
     instance.destroy();
   },
 })
@@ -116,7 +116,7 @@ const footerText =
 
 new TypeIt("#footer-text", {
   speed: textSpeed,
-  afterComplete: function (step, instance) {
+  afterComplete(step, instance) {
     instance.destroy();
   },
 })
@@ -139,28 +139,28 @@ function tp(textColor, bgColor) {
   root.style.setProperty("--bgcol", bgColor);
 }
 
-const theme = "Hackerman"; // H4CK3RM4N, if you're feeling leety
+let theme = "Hackerman"; // H4CK3RM4N, if you're feeling leety
 
 const tname = document.getElementById("click-to-change");
 
 function changeTheme() {
-  if (theme == "Hackerman") {
+  if (theme === "Hackerman") {
     theme = "Coming Soon";
-  } else if (theme == "Coming Soon") {
+  } else if (theme === "Coming Soon") {
     theme = "Vaporwave";
-  } else if (theme == "Vaporwave") {
+  } else if (theme === "Vaporwave") {
     theme = "Lambda";
-  } else if (theme == "Lambda") {
+  } else if (theme === "Lambda") {
     theme = "Hackerman";
   }
 
-  if (theme == "Hackerman") {
+  if (theme === "Hackerman") {
     tp("#33ff4e", "#213123");
-  } else if (theme == "Coming Soon") {
+  } else if (theme === "Coming Soon") {
     tp("#fdf008", "#004852");
-  } else if (theme == "Vaporwave") {
+  } else if (theme === "Vaporwave") {
     tp("#47ffe7", "#3c153a");
-  } else if (theme == "Lambda") {
+  } else if (theme === "Lambda") {
     tp("#ff9900", "#262c2a");
   }
   tname.textContent = `< ${theme} >`;
