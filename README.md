@@ -12,7 +12,7 @@ Note: Some features may not work in Firefox.
 
 ## Themes
 
-This program contains a set of four themes: Hackerman, Coming Soon, Vaporwave and Lambda. All themes are from the Opera GX Internet Browser.
+This program contains a set of four themes: Hackerman, Coming Soon, Vaporwave and Lambda. All themes are from the [Opera GX Internet Browser](https://www.opera.com/gx).
 
 ## Bugs and Glitches
 
