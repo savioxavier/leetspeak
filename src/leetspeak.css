@@ -143,6 +143,7 @@ textarea {
   border: 2px solid var(--textcol);
   padding: 0.12rem;
   font-size: 0.9rem;
+  user-select: none;
 }
 
 #footer-text {

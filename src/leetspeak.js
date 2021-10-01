@@ -134,36 +134,27 @@ let root = document.documentElement;
 //  (text color and background color, respectively.)
 // All theme colors are from Opera GX
 
-function tp(textColor, bgColor) {
-  root.style.setProperty("--textcol", textColor);
-  root.style.setProperty("--bgcol", bgColor);
-}
+let tname = document.getElementById("click-to-change");
 
 let theme = "Hackerman"; // H4CK3RM4N, if you're feeling leety
 
-const tname = document.getElementById("click-to-change");
+function tp(textColor, bgColor, nextThemeName) {
+  root.style.setProperty("--textcol", textColor);
+  root.style.setProperty("--bgcol", bgColor);
+  theme = nextThemeName;
+  tname.textContent = `< ${nextThemeName} >`;
+}
 
 function changeTheme() {
   if (theme === "Hackerman") {
-    theme = "Coming Soon";
+    tp("#fdf008", "#004852", "Coming Soon");
   } else if (theme === "Coming Soon") {
-    theme = "Vaporwave";
+    tp("#47ffe7", "#3c153a", "Vaporwave");
   } else if (theme === "Vaporwave") {
-    theme = "Lambda";
+    tp("#ff9900", "#262c2a", "Lambda");
   } else if (theme === "Lambda") {
-    theme = "Hackerman";
+    tp("#33ff4e", "#213123", "Hackerman");
   }
-
-  if (theme === "Hackerman") {
-    tp("#33ff4e", "#213123");
-  } else if (theme === "Coming Soon") {
-    tp("#fdf008", "#004852");
-  } else if (theme === "Vaporwave") {
-    tp("#47ffe7", "#3c153a");
-  } else if (theme === "Lambda") {
-    tp("#ff9900", "#262c2a");
-  }
-  tname.textContent = `< ${theme} >`;
 }
 
 tname.textContent = `< ${theme} >`;
