@@ -3,11 +3,13 @@
 
 function convertToLeet() {
   // User input string
-  const str = document.querySelector("#regular-text").value;
+  const text = document.querySelector("#regular-text").value;
 
   const result = document.querySelector("#result");
 
   const type = document.querySelector("#leet-type").value;
+
+  const str = text.toLowerCase();
 
   let chars = {};
 
@@ -16,10 +18,10 @@ function convertToLeet() {
       a: "@",
       b: "ß",
       c: "©",
-      d: "D",
+      d: "ⓓ",
       e: "€",
       f: "ƒ",
-      g: "G",
+      g: "❡",
       h: "#",
       i: "!",
       j: "ĵ",
@@ -41,7 +43,6 @@ function convertToLeet() {
       z: "ẕ",
     };
 
-    str.toLowerCase();
 
     const convertResult = str.replace(
       /[abcdefghijklmnopqrstuvwxyz]/g,
@@ -58,7 +59,6 @@ function convertToLeet() {
       s: "5",
     };
 
-    str.toLowerCase();
 
     const convertResult = str.replace(/[aeios]/g, (m) => chars[m]);
 
@@ -169,14 +169,9 @@ tname.addEventListener("click", changeTheme);
 // Then we proceed to copy the content of the "invisible" textarea.
 
 function copyText() {
-  const preText = document.querySelector("#result").textContent;
-  const copyTextbox = document.createElement("textarea");
-  copyTextbox.textContent = preText;
-  document.body.append(copyTextbox);
-  copyTextbox.classList.add("copy-textbox");
-  copyTextbox.select();
-  document.execCommand("copy");
-  alert("The text has been copied!");
+  result = document.getElementById('result').textContent
+  navigator.clipboard.writeText(result);
+  alert("The text has been copied!")
 }
 
 // You know the rules and so do I
