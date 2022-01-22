@@ -3,11 +3,13 @@
 
 function convertToLeet() {
   // User input string
-  const str = document.querySelector("#regular-text").value;
+  const text = document.querySelector("#regular-text").value;
 
   const result = document.querySelector("#result");
 
   const type = document.querySelector("#leet-type").value;
+
+  const str = text.toLowerCase();
 
   let chars = {};
 
@@ -41,7 +43,6 @@ function convertToLeet() {
       z: "ẕ",
     };
 
-    str.toLowerCase();
 
     const convertResult = str.replace(
       /[abcdefghijklmnopqrstuvwxyz]/g,
@@ -58,7 +59,6 @@ function convertToLeet() {
       s: "5",
     };
 
-    str.toLowerCase();
 
     const convertResult = str.replace(/[aeios]/g, (m) => chars[m]);
 
