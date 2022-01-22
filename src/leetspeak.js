@@ -169,14 +169,9 @@ tname.addEventListener("click", changeTheme);
 // Then we proceed to copy the content of the "invisible" textarea.
 
 function copyText() {
-  const preText = document.querySelector("#result").textContent;
-  const copyTextbox = document.createElement("textarea");
-  copyTextbox.textContent = preText;
-  document.body.append(copyTextbox);
-  copyTextbox.classList.add("copy-textbox");
-  copyTextbox.select();
-  document.execCommand("copy");
-  alert("The text has been copied!");
+  result = document.getElementById('result').textContent
+  navigator.clipboard.writeText(result);
+  alert("The text has been copied!")
 }
 
 // You know the rules and so do I
