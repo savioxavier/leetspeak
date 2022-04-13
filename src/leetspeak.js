@@ -163,11 +163,6 @@ tname.textContent = `< ${theme} >`;
 
 tname.addEventListener("click", changeTheme);
 
-// Since select() [the standard for copying text]
-// can only be used for visible input elements such as textarea,
-// we extract the text content of <pre> element and assign it to a new <textarea> element.
-// Then we proceed to copy the content of the "invisible" textarea.
-
 function copyText() {
   result = document.getElementById('result').textContent
   navigator.clipboard.writeText(result);
